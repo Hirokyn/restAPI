@@ -11,7 +11,6 @@ class ClienteController extends Controller
     public function __construct(Cliente $cliente) {
         $this->cliente = $cliente;
     }
-
     /**
      * Display a listing of the resource.
      *

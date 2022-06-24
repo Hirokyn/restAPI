@@ -48,7 +48,7 @@ class MarcaController extends Controller
     public function store(Request $request)
     {
         
-        $request->validate($this->marca->rules(), $this->marca->feedback());
+        $request->validate($this->marca->rules());
 
         $imagem = $request->file('imagem');
         $imagem_urn = $imagem->store('imagens', 'public');
@@ -81,8 +81,6 @@ class MarcaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-
         $marca = $this->marca->findOrFail($id);
 
         if($request->method() === 'PATCH'){
