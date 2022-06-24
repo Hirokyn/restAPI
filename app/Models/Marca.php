@@ -15,7 +15,7 @@ class Marca extends Model
    {
         $regras = [
             'nome' => 'required|unique:marcas,nome,'.$this->id.'|min:3',
-            'imagem' => 'required|file'
+            'imagem' => 'required|file|mimes:png,jpg,jpeg'
         ];
         
         return $regras;

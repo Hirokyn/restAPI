@@ -15,7 +15,7 @@ class Modelo extends Model
         $regras = [
             'marca_id'      => 'exists:marcas,id',
             'nome'          => 'required|unique:modelos,nome,'.$this->id.'|min:3',
-            'imagem'        => 'required|file|mime:png,jpg,jpeg',
+            'imagem'        => 'required|file|mimes:png,jpg,jpeg',
             'numero_portas' => 'required|integer|digits_between:1,5',
             'lugares'       => 'required|integer|digits_between:1,20',
             'air_bag'       => 'required|boolean',
